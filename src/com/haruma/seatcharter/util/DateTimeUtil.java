@@ -10,7 +10,7 @@ public class DateTimeUtil {
         date = new Date();
     }
     public String getTimeWithMil() {
-        dateTimeFormat = new SimpleDateFormat("HH::mm:ss.SS");
+        dateTimeFormat = new SimpleDateFormat("HH:mm:ss.SS");
         return dateTimeFormat.format(date);
     }
 }
