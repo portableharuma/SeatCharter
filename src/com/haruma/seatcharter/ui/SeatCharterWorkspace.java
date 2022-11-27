@@ -2,9 +2,9 @@ package com.haruma.seatcharter.ui;
 
 import javax.swing.*;
 
-public class CharterWorkspace extends JPanel {
+public class SeatCharterWorkspace extends JPanel {
     private JPanel charterWorkspace;
-    public CharterWorkspace() {
+    public SeatCharterWorkspace(int numOfTables, int numOfStudents) {
 
         this.add(charterWorkspace);
     }

@@ -2,7 +2,7 @@ package com.haruma.seatcharter;
 
 import com.formdev.flatlaf.FlatDarculaLaf;
 import com.formdev.flatlaf.FlatLaf;
-import com.haruma.seatcharter.ui.SSFrame;
+import com.haruma.seatcharter.ui.SeatCharterFrame;
 import com.haruma.seatcharter.util.Logger;
 import com.haruma.seatcharter.seatcharterSys.ClassID;
 import com.haruma.seatcharter.util.DateTimeUtil;
@@ -28,7 +28,7 @@ public class SeatCharter {
         UIManager.put("TabbedPane.showTabSeparators", true);
 
         FlatLaf.setup(new FlatDarculaLaf());
-        new SSFrame();
+        new SeatCharterFrame();
         logger.log(classID, "UI started");
     }
 }

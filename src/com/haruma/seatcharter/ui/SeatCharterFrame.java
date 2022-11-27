@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SSFrame extends JFrame {
+public class SeatCharterFrame extends JFrame {
     private ClassID classID;
 
     private JPanel formPanel;
@@ -37,7 +37,7 @@ public class SSFrame extends JFrame {
     private JMenuItem chartItem;
     private JMenuItem linkItem;
 
-    public SSFrame() {
+    public SeatCharterFrame() {
         classID = new ClassID("SSFrame");
 
         //window
@@ -141,8 +141,9 @@ public class SSFrame extends JFrame {
 //        seatCharterTabs.removeTabAt(1);
     }
     public void listeners() {
-
-        createANewChartButton.addActionListener(e -> seatCharterTabs.addTab("Workspace1", new CharterWorkspace()));
+        createANewChartButton.addActionListener(e -> createNewWorkspace());
+    }
+    public void createNewWorkspace() {
 
     }
 }
