@@ -1,7 +1,7 @@
 package com.haruma.seatcharter.ui;
 
 import com.haruma.seatcharter.SeatCharter;
-import com.haruma.seatcharter.seatcharterSys.ClassID;
+import com.haruma.seatcharter.seatchartersystem.ClassID;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -15,7 +15,6 @@ public class SeatCharterFrame extends JFrame {
     private JButton createANewChartButton;
     private JButton openAnExistingChartButton;
     private JPanel getStartedTab;
-    private JPanel chart1;
 
     private JMenuBar menuBar;
     private JMenu fileMenu;
@@ -41,7 +40,7 @@ public class SeatCharterFrame extends JFrame {
         classID = new ClassID("SSFrame");
 
         //window
-        setTitle("Seat Charter (v0.1.0) by Haruma");
+        setTitle("Seat Charter (v0.1.0)");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setSize(840, 480);
@@ -127,10 +126,7 @@ public class SeatCharterFrame extends JFrame {
         shareMenu = new JMenu("Share");
 
         menuBar.add(fileMenu);
-        menuBar.add(editMenu);
-        menuBar.add(navigateMenu);
         menuBar.add(helpMenu);
-        menuBar.add(shareMenu);
         setJMenuBar(menuBar);
     }
     public void addForm() {
@@ -144,6 +140,11 @@ public class SeatCharterFrame extends JFrame {
         createANewChartButton.addActionListener(e -> createNewWorkspace());
     }
     public void createNewWorkspace() {
-
+        SeatCharterCreationPane seatcharterCreationPane = new SeatCharterCreationPane(this);
+        seatcharterCreationPane.setSize(315, 225);
+        seatcharterCreationPane.setLocationRelativeTo(this);
+    }
+    public JTabbedPane getSeatCharterTabs() {
+        return seatCharterTabs;
     }
 }

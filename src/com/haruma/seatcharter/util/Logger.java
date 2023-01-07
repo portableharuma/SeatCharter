@@ -1,7 +1,7 @@
 package com.haruma.seatcharter.util;
 
 import com.haruma.seatcharter.SeatCharter;
-import com.haruma.seatcharter.seatcharterSys.ClassID;
+import com.haruma.seatcharter.seatchartersystem.ClassID;
 
 public class Logger {
     public void log(ClassID classID, String report) {

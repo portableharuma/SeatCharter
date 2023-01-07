@@ -4,8 +4,10 @@ import javax.swing.*;
 
 public class SeatCharterWorkspace extends JPanel {
     private JPanel charterWorkspace;
-    public SeatCharterWorkspace(int numOfTables, int numOfStudents) {
+    private JTable table1;
 
-        this.add(charterWorkspace);
+    public SeatCharterWorkspace(String name, int numOfTables, int numOfStudents, SeatCharterFrame seatCharterFrame) {
+        seatCharterFrame.getSeatCharterTabs().add(this.add(charterWorkspace));
+        seatCharterFrame.getSeatCharterTabs().setTitleAt(seatCharterFrame.getSeatCharterTabs().indexOfTab(""), name);
     }
 }

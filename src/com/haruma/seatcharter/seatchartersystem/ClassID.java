@@ -1,4 +1,4 @@
-package com.haruma.seatcharter.seatcharterSys;
+package com.haruma.seatcharter.seatchartersystem;
 
 public class ClassID {
     private String classID;
